@@ -57,11 +57,14 @@ class TensorflowMoveNetHumanPoseEstimator:
     
     #
     model_name = config.get(INFERENCE, "model_name", dvalue="movenet_thunder")
-    
-    if "movenet_lightning" in model_name:
+    print("--- model_name {}".format(model_name))
+    if "multipose/lightning" in model_name:
+      self.module = hub.load("https://tfhub.dev/google/movenet/multipose/lightning/1")
+      self.input_size = 256
+    elif "singlepose/lightning" in model_name:
       self.module = hub.load("https://tfhub.dev/google/movenet/singlepose/lightning/4")
       self.input_size = 192
-    elif "movenet_thunder" in model_name:
+    elif "singlepose/thunder" in model_name:
       self.module = hub.load("https://tfhub.dev/google/movenet/singlepose/thunder/4")
       self.input_size = 256
     else:
