@@ -93,7 +93,7 @@ Please run the following command.<br>
 >python TensorflowMoveNetHumanPoseEstimator.py ./inference2.config
 </pre>
 sample outputs<br>
-<img src="./assets/outputs.png" width="1024" height="auto"><br>
+<img src="./assets/outputs2.png" width="1024" height="auto"><br>
 
 
 
