@@ -109,7 +109,7 @@ class TensorflowMoveNetHumanPoseEstimator:
 
 if __name__ == "__main__":
   try:
-    config_file = "./inference.conf"
+    config_file = "./inference.config"
     if len(sys.argv) ==2:
       config_file = sys.argv[1]
 
