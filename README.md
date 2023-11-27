@@ -50,12 +50,12 @@ Activate the virtual environmet,<br>
 Please define your own inference.config file<br>
 <pre>
 [inference]
-model_name         ="movenet_thunder"
+model_name         ="singlepose/thunder"
 images_dir         = "./images"
 outputs_dir        = "./outputs"
+#resize             = "656x368"
 threshold          = 0.2
 debug              = False
-
 </pre>
 
 Please put your own human pose images under images_dir<br>
