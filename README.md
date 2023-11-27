@@ -35,7 +35,7 @@ Activate the virtual environmet,<br>
 <pre>
 >mkdir c:\work
 >cd c:\work
->git clone https://github.com/atlan-antillia/Tensorflow-HumanPose-Estimator.git
+>git clone https://github.com/sarah-antillia/Tensorflow-MoveNet-HumanPose-Estimator.git
 </pre>
 
 <h3>2.4 Install python packages</h3>
