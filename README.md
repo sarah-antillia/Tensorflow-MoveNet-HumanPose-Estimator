@@ -54,7 +54,6 @@ Please define your own inference.config file<br>
 model_name         ="singlepose/thunder"
 images_dir         = "./images"
 outputs_dir        = "./outputs"
-#resize             = "656x368"
 threshold          = 0.2
 debug              = False
 </pre>
@@ -73,5 +72,30 @@ sample outputs<br>
 
 This MoveNet estimator can detect the pose of a droid as shown below.<br>
 <img src = "./outputs/robot.png" width="1024" height="auto"><br>
+
+<h3>3.3 Inference2.config file </h3>
+<pre>
+[inference]
+; model_name         = "multipose/lightning"
+model_name         ="singlepose/thunder"
+images_dir         = "./images2"
+outputs_dir        = "./outputs2"
+threshold          = 0.2
+debug              = False
+</pre>
+
+sample images<br>
+<img src="./assets/images2.png" width="1024" height="auto"><br>
+ 
+<h3>3.4 Estimation </h3>
+Please run the following command.<br>
+<pre>
+>python TensorflowMoveNetHumanPoseEstimator.py ./inference2.config
+</pre>
+sample outputs<br>
+<img src="./assets/outputs.png" width="1024" height="auto"><br>
+
+
+
 
 
