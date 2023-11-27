@@ -71,3 +71,7 @@ Please run the following command.<br>
 sample outputs<br>
 <img src="./assets/outputs.png" width="1024" height="auto"><br>
 
+This MoveNet estimator can detect the pose of a droid as shown below.<br>
+<img src = "./outputs/robot,png" width="1024" height="auto"><br>
+
+
