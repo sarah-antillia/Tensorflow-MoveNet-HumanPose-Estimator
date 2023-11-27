@@ -50,6 +50,7 @@ Activate the virtual environmet,<br>
 Please define your own inference.config file<br>
 <pre>
 [inference]
+; model_name         = "multipose/lightning"
 model_name         ="singlepose/thunder"
 images_dir         = "./images"
 outputs_dir        = "./outputs"
