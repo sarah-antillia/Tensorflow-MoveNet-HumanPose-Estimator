@@ -15,7 +15,7 @@ This is based on the following Tensorflow MoveNet Pose Estimation.<br>
  Tensorflow 2.15
 </pre>
 
-<h3>2.2 Python virual enviroment </h3>
+<h3>2.2 Python virtual enviroment </h3>
 Please create a python virtual env.<br>
 <pre>
 >python -m venv c:\py310-tfpose
