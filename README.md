@@ -70,7 +70,11 @@ Please run the following command.<br>
 sample outputs<br>
 <img src="./assets/outputs.png" width="1024" height="auto"><br>
 
-This MoveNet estimator can detect the pose of a droid as shown below.<br>
+This MoveNet estimator can the pose of a Barbie doll as shown below.<br>
+
+<img src="./outputs/DSC08521.png" width="1024" height="auto"><br>
+
+,and the pose of a droid as shown below.<br>
 <img src = "./outputs/robot.png" width="1024" height="auto"><br>
 
 <h3>3.3 Inference2.config file </h3>
