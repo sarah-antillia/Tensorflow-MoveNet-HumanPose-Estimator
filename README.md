@@ -72,10 +72,10 @@ sample outputs<br>
 
 This MoveNet estimator can estimate the pose of a Barbie doll as shown below.<br>
 
-<img src="./outputs/DSC08521.png" width="480" height="auto"><br>
+<img src="./outputs/DSC08521.png" width="320" height="auto"><br>
 
 ,and also the pose of a droid as shown below.<br>
-<img src = "./outputs/robot.png" width="480" height="auto"><br>
+<img src = "./outputs/robot.png" width="320" height="auto"><br>
 
 <h3>3.3 Inference2.config file </h3>
 <pre>
@@ -99,6 +99,9 @@ Please run the following command.<br>
 sample outputs<br>
 <img src="./assets/outputs2.png" width="1024" height="auto"><br>
 
+<img src="./outputs2/DSC08543.png" width="320" height="auto"><br>
+
+<img src="./outputs2/DSC08540.png" width="320" height="auto"><br>
 
 
 
