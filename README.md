@@ -50,7 +50,6 @@ Activate the virtual environmet,<br>
 Please define your own inference.config file<br>
 <pre>
 [inference]
-[inference]
 model_name         ="movenet_thunder"
 images_dir         = "./images"
 outputs_dir        = "./outputs"
