@@ -1,18 +1,19 @@
 
 <h2>Tensorflow-MoveNet-HumanPose-Estimator (Updated:2023/12/08)</h2>
 
+<h3>Updated</h3>
+<li>2023/12/08: Modified the urls of movenet modules to be https://www.kaggle.com/models/google/movenet/frameworks/TensorFlow2/variations/* in <a href="./TensorflowMoveNetHumanPoseEstimator.py"> TensorflowMoveNetHumanPoseEstimator.py</a></li>
+<li>2023/12/08: Modified <a href="./HumanPoseVisualizer.py">HumanPoseVisualizer</a> not to use matplotlib.</li>
+<li>2023/12/08: Added an example of multipose estimation <a href="./inference3.config">inference3.config</a>.</li>
+
+
 <h3>1 Base Source Code </h3>
-This is based on the following Tensorflow MoveNet Pose Estimation tutorial.<br>
+This is based on the following Tensorflow MoveNet Pose Estimation tutorial<br>
 
  https://github.com/tensorflow/docs/blob/master/site/en/hub/tutorials/movenet.ipynb<br>
 ,and kaggle code:<br>
 
  https://www.kaggle.com/code/ibrahimserouis99/human-pose-estimation-with-movenet<br>
-
-Updated:
-<li>2023/12/08: Modified the urls of movenet modules to be https://www.kaggle.com/models/google/movenet/frameworks/TensorFlow2/variations/* in <a href="./TensorflowMoveNetHumanPoseEstimator.py"> TensorflowMoveNetHumanPoseEstimator.py</a></li>
-<li>2023/12/08: Modified <a href="./HumanPoseVisualizer.py">HumanPoseVisualizer</a> not to use matplotlib.</li>
-<li>2023/12/08: Added an example of multipose estimation <a href="./inference3.config">inference3.config</a>.</li>
 
 
 <h3>2 Development Environement</h3>
