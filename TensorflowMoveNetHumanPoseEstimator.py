@@ -39,6 +39,10 @@ from ConfigParser import ConfigParser
 
 from HumanPoseVisualizer import HumanPoseVisualizer
 
+MULTIPOSE_LIGHTING = "multipose-lightning"
+SINGLEPOSE_LIGHTING    = "singlepose-lightning"
+SINGLEPOSE_THUNDER     = "singlepose-thunder"
+
 
 class TensorflowMoveNetHumanPoseEstimator:
 
@@ -56,16 +60,17 @@ class TensorflowMoveNetHumanPoseEstimator:
         os.makedirs(self.outputs_dir)
     
     #
-    model_name = config.get(INFERENCE, "model_name", dvalue="movenet_thunder")
-    print("--- model_name {}".format(model_name))
-    if "multipose/lightning" in model_name:
-      self.module = hub.load("https://tfhub.dev/google/movenet/multipose/lightning/1")
+    self.model_name = config.get(INFERENCE, "model_name", dvalue="singlepose-thunder")
+    print("--- model_name {}".format(self.model_name))
+
+    if self.model_name == MULTIPOSE_LIGHTING:
+      self.module = hub.load("https://www.kaggle.com/models/google/movenet/frameworks/TensorFlow2/variations/multipose-lightning/versions/1")
       self.input_size = 256
-    elif "singlepose/lightning" in model_name:
-      self.module = hub.load("https://tfhub.dev/google/movenet/singlepose/lightning/4")
+    elif self.model_name == SINGLEPOSE_LIGHTING:
+      self.module = hub.load("https://www.kaggle.com/models/google/movenet/frameworks/TensorFlow2/variations/singlepose-lighting/versions/4")
       self.input_size = 192
-    elif "singlepose/thunder" in model_name:
-      self.module = hub.load("https://tfhub.dev/google/movenet/singlepose/thunder/4")
+    elif self.model_name == SINGLEPOSE_THUNDER:
+      self.module = hub.load("https://www.kaggle.com/models/google/movenet/frameworks/TensorFlow2/variations/singlepose-thunder/versions/4")
       self.input_size = 256
     else:
       raise ValueError("Unsupported model name: %s" % model_name)
@@ -95,9 +100,28 @@ class TensorflowMoveNetHumanPoseEstimator:
       input_image = tf.cast(input_image, dtype=tf.int32)
       
       outputs = self.model(input_image)
-      # Output is a [1, 1, 17, 3] tensor.
-      keypoints_with_scores = outputs['output_0'].numpy()
-      
+      # Please see also:
+      # https://www.kaggle.com/code/ibrahimserouis99/human-pose-estimation-with-movenet
+      #         """
+      #  Output shape :  [1, 6, 56] ---> (batch size), (instances), (xy keypoints coordinates and score from [0:50] 
+      #  and [ymin, xmin, ymax, xmax, score] for the remaining elements)
+      #  First, let's resize it to a more convenient shape, following this logic : 
+      #  - First channel ---> each instance
+      #  - Second channel ---> 17 keypoints for each instance
+      #  - The 51st values of the last channel ----> the confidence score.
+      #  Thus, the Tensor is reshaped without losing important information. 
+     
+      if self.model_name == SINGLEPOSE_LIGHTING or self.model_name == SINGLEPOSE_THUNDER:
+        # Output is a [1, 1, 17, 3] tensor.
+        print("--- singlepose-lighting or singlepose-thunder")
+
+        keypoints_with_scores = outputs['output_0'].numpy()
+      elif self.model_name == MULTIPOSE_LIGHTING:
+        #  Output shape :  [1, 6, 56] ---> (batch size), (instances), (xy keypoints coordinates and score from [0:50] 
+        print("--- multipose-lighting")
+        keypoints_with_scores = outputs["output_0"].numpy()[:,:,:51].reshape((6,17,3))
+        
+  
       # Visualize the predictions with image.
       display_image = tf.expand_dims(image, axis=0)
       #display_image = tf.cast(tf.image.resize_with_pad(display_image, 1280, 1280), dtype=tf.int32)
