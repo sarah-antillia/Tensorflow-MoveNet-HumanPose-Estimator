@@ -161,10 +161,13 @@ Please run the following command.<br>
 sample outputs<br>
 <img src="./assets/outputs3.png" width="1280" height="auto"><br>
 
+<img src="./outputs3/riding_112.png" width="320" height="auto"><br>
+
 <img src="./outputs3/standing_109.png" width="320" height="auto"><br>
 
-<img src="./outputs3/walking_112.png" width="320" height="auto"><br>
+<img src="./outputs3/walking_102.png" width="320" height="auto"><br>
 
+<img src="./outputs3/walking_112.png" width="320" height="auto"><br>
 
 
 
