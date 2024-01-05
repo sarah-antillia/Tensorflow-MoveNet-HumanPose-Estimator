@@ -1,10 +1,11 @@
 
-<h2>Tensorflow-MoveNet-HumanPose-Estimator (Updated:2023/12/08)</h2>
+<h2>Tensorflow-MoveNet-HumanPose-Estimator (Updated:2024/01/05)</h2>
 
 <h3>Updated</h3>
 <li>2023/12/08: Modified the urls of movenet modules to be https://www.kaggle.com/models/google/movenet/frameworks/TensorFlow2/variations/* in <a href="./TensorflowMoveNetHumanPoseEstimator.py"> TensorflowMoveNetHumanPoseEstimator.py</a></li>
 <li>2023/12/08: Modified <a href="./HumanPoseVisualizer.py">HumanPoseVisualizer</a> not to use matplotlib.</li>
 <li>2023/12/08: Added an example of multipose estimation <a href="./inference3.config">inference3.config</a>.</li>
+<li>2024/01/05: Added an example of multipose estimation <a href="./inference4.config">inference4.config</a>.</li>
 
 
 <h3>1 Base Source Code </h3>
@@ -172,5 +173,32 @@ sample outputs<br>
 
 
 
+<h3>4.4 MultiPose Estimation</h3>
+
+Please run the following command.<br>
+<pre>
+>python TensorflowMoveNetHumanPoseEstimator.py ./inference4.config
+</pre>
+sample outputs<br>
+
+<img src="./assets/outputs4.png" width="1280" height="auto"><br>
+
+<img src="./outputs4/riding_2431.png" width="320" height="auto"><br>
+
+<img src="./outputs4/running_2421.png" width="320" height="auto"><br>
+
+<img src="./outputs4/sitting_2401.png" width="320" height="auto"><br>
+
+<img src="./outputs4/standing_2407.png" width="320" height="auto"><br>
+
+<img src="./outputs4/walking_2435.png" width="320" height="auto"><br>
+
+<br>
+<h3>Acknowledgments</h3>
+We are grateful to everyone who took part in the photo shoot for the testing of 
+this MoveNetHumanPoseEstimation project.<br>
+We sincerely appreciate the cooperation and support of Mr. Yuji Suyama of <a href="https://www.zebrasand.co.jp/">
+zebrasand.co.jp</a>.
+<br>
 
 
