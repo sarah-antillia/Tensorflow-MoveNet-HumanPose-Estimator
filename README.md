@@ -197,8 +197,7 @@ sample outputs<br>
 <h3>Acknowledgments</h3>
 We are grateful to everyone who took part in the photo shoot for the testing of 
 this MoveNetHumanPoseEstimation project.<br>
-We sincerely appreciate the cooperation and support of Mr. Yuji Suyama of <a href="https://www.zebrasand.co.jp/">
-zebrasand.co.jp</a>.
+We sincerely appreciate the cooperation and support of Mr. Yuji Suyama.
 <br>
 
 
